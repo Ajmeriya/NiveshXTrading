@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ForgotPasswordRepository extends JpaRepository<ForgotPasswordToken,String> {
 
-    ForgotPasswordToken findByUserId(String userId);
+    ForgotPasswordToken findByUserId(Long userId);
 
 }

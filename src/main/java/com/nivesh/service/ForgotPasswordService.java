@@ -14,7 +14,7 @@ public interface ForgotPasswordService {
                                     String sendTo);
 
     ForgotPasswordToken findById(String id);
-    ForgotPasswordToken findByUserId(String userId);
+    ForgotPasswordToken findByUserId(Long userId);
     void deleteToken(ForgotPasswordToken token);
 
 }

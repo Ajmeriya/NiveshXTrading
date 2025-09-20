@@ -1,26 +1,26 @@
 package com.nivesh.model;
 
-
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import com.nivesh.model.User;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
 @Entity
 public class TwoFactorOTP {
-
     @Id
     private String id;
 
     private String otp;
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @OneToOne
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String jwt;
+
+
 
 }

@@ -1,4 +1,4 @@
-package com.nivesh.config;
+package com.nivesh.response;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package com.nivesh.controller;
 
-import com.nivesh.config.Authresponse;
+import com.nivesh.response.Authresponse;
 import com.nivesh.config.JwtProvider;
 import com.nivesh.model.TwoFactorOTP;
 import com.nivesh.model.User;
@@ -9,7 +9,6 @@ import com.nivesh.service.CustomeUserDetailsService;
 import com.nivesh.service.EmailService;
 import com.nivesh.service.TwoFactorOtpService;
 import com.nivesh.utils.OtpUtils;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,8 +18,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequestMapping("/auth")
